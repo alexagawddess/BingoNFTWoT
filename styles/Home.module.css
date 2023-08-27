@@ -60,3 +60,14 @@
   z-index: 1; /* This will ensure the canvas is on top and clickable */
 }
 
+.button1 {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #000000; /* A shade of purple to match your card's background */
+  color: #fff;
+}
+

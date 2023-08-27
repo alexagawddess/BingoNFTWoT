@@ -84,8 +84,8 @@ const undoCanvas = (canvas: HTMLCanvasElement) => {
                 <ThirdwebNftMedia metadata={nft.metadata} className={styles.image} />
                 <canvas ref={(el) => {
                   if (el) {
-                    el.width = el.offsetWidth;
-                    el.height = el.offsetHeight;
+                    el.width = el.clientWidth; 
+                    el.height = el.clientHeight;                    
                     setupCanvasInteraction(el);
                   }
                 }}
@@ -106,6 +106,7 @@ const undoCanvas = (canvas: HTMLCanvasElement) => {
               }}>
                 Clear
               </button>
+
 
             </div>
           ))}
