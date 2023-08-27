@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   const address = useAddress();
   const contractAddress = "0x2CceC284704fb77b0845b4A86f610585521eC374";
   const { contract } = useContract(contractAddress);
-  const { data: nfts, isLoading: loading } = useOwnedNFTs(
+  const { data: nfts } = useOwnedNFTs(
     contract,
     address,
   );
@@ -19,11 +19,6 @@ const Home: NextPage = () => {
       address.substring(0, 6) + "..." + address.substring(address.length - 4)
     );
   };
-
-  if (loading) {
-    return <div className={styles.container}>Loading...</div>;
-  }
-
 
   return (
     <div className={styles.container}>
