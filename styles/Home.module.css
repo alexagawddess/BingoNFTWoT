@@ -48,7 +48,6 @@
   padding: 0;
 }
 
-
 .canvas {
   position: absolute;
   top: 0;
@@ -57,4 +56,18 @@
   height: 100%;
   cursor: pointer; 
   z-index: 1; /* Ensuring the canvas is on top */
+}
+
+.clearButton {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.clearButton:hover {
+  background-color: #333333;
 }

@@ -93,19 +93,17 @@ const undoCanvas = (canvas: HTMLCanvasElement) => {
                 />
               </div>
 
-              <button onClick={(e) => {
-                const canvas = e.currentTarget.parentElement?.querySelector('canvas');
-                if (canvas) undoCanvas(canvas);
-              }}>
-                Undo
-              </button>
+              <button 
+  className={styles.clearButton} 
+  onClick={(e) => {
+    const canvas = e.currentTarget.parentElement?.querySelector('canvas');
+    if (canvas) clearCanvas(canvas);
+  }}
+>
+  Clear
+</button>
 
-              <button onClick={(e) => {
-                const canvas = e.currentTarget.parentElement?.querySelector('canvas');
-                if (canvas) clearCanvas(canvas);
-              }}>
-                Clear
-              </button>
+
 
 
             </div>
