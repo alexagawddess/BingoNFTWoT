@@ -9,7 +9,9 @@ const activeChain = "polygon";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThirdwebProvider activeChain={activeChain}>
+    <ThirdwebProvider
+    clientId={'759a3908108fe03e580ea918a5b9e683'}
+     activeChain={activeChain}>
       <Component {...pageProps} />
     </ThirdwebProvider>
   );

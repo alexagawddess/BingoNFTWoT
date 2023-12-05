@@ -1,3 +1,57 @@
+.titleWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top vertically */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box; /* Make sure the padding doesn't affect the total width */
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Ensure header stays above other content */
+}
+
+
+.header {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; /* Make sure content aligns to the top */
+  padding-top: 20px; /* Adjust the top padding */
+  padding-left: 20px; /* You can adjust other paddings if needed */
+  padding-right: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.buttonPlaceholder {
+  flex-shrink: 0; /* Prevent it from shrinking */
+  width: 200px; 
+}
+
+.connectWallet {
+  position: absolute;
+  top: 20px; /* This ensures that the wallet button also has a 20px padding from the top */
+  right: 100px; 
+}
+
+
+
+.header h1 {
+  font-size: 2em;
+  color: white;
+  margin: 0; /* to remove any default margins */
+}
+
+.loadingScreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 60px); /* Assuming your header is around 60px in height, adjust as needed */
+  font-size: 1.5em;
+  color: white;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -16,6 +70,7 @@
   margin-top: 50px;
   gap: 20px;
   width: 80vw;
+  margin-top: 100px; /* Adjust this value based on the height of your header */
 }
 
 .card {
@@ -70,4 +125,111 @@
 
 .clearButton:hover {
   background-color: #333333;
+}
+
+.undoButton {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px; 
+  cursor: pointer;
+}
+
+.undoButton:hover {
+  background-color: #333333;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.purchaseButton {
+  background-color: #8224e3; /* Choose any color you prefer */
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.purchaseButton:hover {
+  background-color: #8224e3; /* Darker shade for hover effect */
+}
+
+.loadingScreen img {
+  width: 160px;
+  height: 40px;  /* To maintain aspect ratio */
+  display: block;  /* To prevent default gaps below the image */
+}
+
+/* These styles will be applied for screens less than or equal to 600px in width */
+@media only screen and (max-width: 600px) {
+  
+  .header, .buttonPlaceholder, .cards, .image {
+    /* Reset certain widths for smaller screens */
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .header {
+    /* Simplify header padding for mobile */
+    padding: 10px;
+    flex-direction: column;  /* Stack elements vertically in the header */
+    align-items: center; /* Center them */
+  }
+
+  .buttonPlaceholder, .connectWallet {
+    margin-bottom: 10px; /* Add some spacing between elements when they stack */
+  }
+
+.image img {
+    /* Adjust canvas and image dimensions for smaller screens */
+    width: 100%;
+    height: auto;
+  }
+
+  .purchaseButton, .clearButton, .undoButton {
+    /* Ensure buttons are easily tappable on mobile */
+    padding: 12px 24px;
+  }
+  
+  .titleWrapper {
+    width: 80%;  /* Adjust title width */
+    height: auto;
+    overflow: hidden; /* Prevent any spillover */
+  }
+
+  .headerImage {
+    max-width: 100%;  /* Adjust image width to fit container */
+    height: auto;
+    padding: 20px;
+  }
+}
+
+.viewMoreButton {
+  display: block;
+  margin: 20px auto;  /* This centers the block-level element */
+  padding: 10px 20px;
+  background-color: #8224e3;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+.viewMoreButton:hover {
+  background-color: #6a1db0; 
+}
+
+.walletConnectPrompt {
+  font-size: 16px;
+  color: #FFFFFF;
+  margin-top: 20px;
+  text-align: center; 
+  font-weight: bold;
 }
