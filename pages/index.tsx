@@ -5,7 +5,7 @@ import { useContract, ThirdwebNftMedia, useAddress, useOwnedNFTs, ConnectWallet 
 import React, { useState, useRef, useCallback } from 'react';
 import Head from 'next/head';
 
-const contractAddress = "0x2CceC284704fb77b0845b4A86f610585521eC374";
+const contractAddress = "0x6727ADc2FA927867D691a26cC3E579662C465ea3";
 
 const NFTCard = ({ nft, canvasRef, handleClearClick, handleUndoClick }: any) => (
     <div key={`nft-${nft.metadata.id.toString()}`} className={styles.card}>
